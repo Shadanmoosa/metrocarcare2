@@ -1902,3 +1902,62 @@ preloader
     font-size: 30px;
     color: white;
 }
+
+
+/* c logo part */
+.c-logo-part {
+  background: #ffffff;
+  padding: 25px 0;
+  text-align: center;
+  filter: alpha(opacity=60);
+}
+
+.c-logo-part ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.c-logo-part ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  max-width: 45%; /* two columns on desktop/tablet */
+}
+
+.c-logo-part ul a {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.c-logo-part ul img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optional: spacing for the whole section */
+.main-section.team {
+  padding: 85px 0;
+}
+
+.main-section.team h6 {
+  margin-bottom: 40px;
+}
+
+/* 📱 Mobile View: Show one logo per line */
+@media (max-width: 768px) {
+  .c-logo-part ul {
+      flex-direction: column;
+  }
+
+  .c-logo-part ul li {
+      max-width: 100%;
+  }
+}
