@@ -104,21 +104,30 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Welcome Area Start ***** -->
-    <div class="welcome-area" id="welcome">
-
-        <!-- ***** Header Text Start ***** -->
+    <div id="welcomeCarousel" class="carousel slide carousel-fade welcome-area" data-bs-ride="carousel">
+        <!-- IMAGES -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('assets/images/banner-bg1.png');"></div>
+            <div class="carousel-item" style="background-image: url('assets/images/banner-bg2.jpg');"></div>
+            <!-- <div class="carousel-item" style="background-image: url('images/banner-bg3.jpg');"></div> -->
+        </div>
+      
+        <!-- TEXT (shared) -->
         <div class="header-text">
             <div class="container">
-                <div class="row">
-                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
-                        <h1 style="font-family:'MyCustomFont'; padding-top: 90px;">your car<br>our Excellence</h1>
-                        <p style="font-family: 'mon';">Skilled technicians and advanced tools ensure a smooth, hassle-free experience.</p>
-                        <a href="https://wa.me/971504098409?text=Hello%20Welcome%20to%20Metro%20CarCare.%20How%20can%20we%20assist%20you%20today%3F%20Whether%20it%E2%80%99s%20oil%20changes%2C%20tire%20services%2C%20battery%20replacement%2C%20or%20any%20vehicle%20maintenance%2C%20we%E2%80%99re%20here%20to%20help%21" class="main-button-slider">Book an Appointment</a>
-                    </div>
-                </div>
+                <h1 style="font-family:'MyCustomFont'; padding-top: 90px;">your car<br>our Excellence</h1>
+                <p style="font-family: 'mon';">Skilled technicians and advanced tools ensure a smooth, hassle-free experience.</p>
+                <a href="https://wa.me/971504098409?text=Hello..." class="main-button-slider">Book an Appointment</a>
             </div>
         </div>
-        <!-- ***** Header Text End ***** -->
+      
+        <!-- Buttons -->
+        <!-- <button class="carousel-control-prev custom-btn" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next custom-btn" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button> -->
     </div>
     <!-- ***** Welcome Area End ***** -->
 
@@ -527,7 +536,16 @@ $(document).ready(function(){
 
     </script>
 
-
+    <!-- for  carosal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const myCarousel = document.querySelector('#welcomeCarousel');
+        const carousel = new bootstrap.Carousel(myCarousel, {
+          interval: 6000, // 6 seconds
+          ride: 'carousel',
+          pause: false
+        });
+      </script>
 
 
   </body>
